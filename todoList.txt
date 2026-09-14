@@ -1,0 +1,57 @@
+Beskrivning
+Du ska skapa en förenklad version av Goodreads. 
+Det ska vara en one page web app där en användare ska kunna hantera en lista med böcker. Användaren ska kunna:
+Se alla böcker i listan.
+Lägga till en ny bok till listan.
+Betygsätta och markera en bok som läst.
+Ta bort en bok från listan. 
+
+
+Krav
+Backend - Firebase Realtime Database
+Använd Firebase Realtime Database och dess REST API. (I slutprjektet kan ni välja om ni vill använda REST eller biblioteket)
+Databasen ska innehålla en samling med böcker
+Varje bok ska innehålla (minst)
+title: string
+author: string
+isRead: boolean
+score: number/undefined
+
+
+Frontend - funktionalitet
+När sidan laddas ska alla böcker i databasen hämtas och visas. 
+Varje bok ska tydligt visa 
+Titel
+Författare
+Om boken är läst eller inte
+Betyg om det finns. (Det ska endast finnas för lästa böcker.)
+Varje bok ska gå att 
+Radera
+Ändra värdet för isRead
+Betygsätta. (Endast om boken är läst.)
+Det ska gå att lägga till en ny bok via ett form. Användaren ska ange minst title och author. 
+
+
+
+
+Du bestämmer själv layout, design och hur användaren ska lägga till, uppdatera och ta bort böcker. 
+
+
+
+
+Frontend - kod och miljö
+OOP
+Använd Objektorienterad Programmering: det ska finnas en klass som beskriver en bok. Varje bok som visas på webbsidan ska vara en instans av klassen. Exakt vad klassen ska innehålla bestämmer du själv men den ska innehålla minst
+all info från databasen
+en metod som är relevant för funktionaliteten av appen
+Använd encapsulation på ett korrekt sätt. 
+
+
+
+Moduler
+Använd moduler.
+
+
+
+Vite & Netlify
+Webbappen ska bundlas med Vite och deployas med Netlify. 

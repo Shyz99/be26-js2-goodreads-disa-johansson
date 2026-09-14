@@ -1,0 +1,18 @@
+{
+"books": {
+  "LOTR": {
+    "title": "Lord Of the Rings",
+    "author": "Disa",
+    "isRead": true,
+    "score": 8
+  },
+
+  "Vampires": {
+    "title": "Vamps",
+    "author": "Rey",
+    "isRead": false,
+    "score": 4
+  }
+}
+
+  }

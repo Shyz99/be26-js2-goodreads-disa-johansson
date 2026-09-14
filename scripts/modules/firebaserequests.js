@@ -1,0 +1,51 @@
+export const baseURL =
+  "https://be26-js2-goodreads-default-rtdb.europe-west1.firebasedatabase.app/books";
+
+export async function addBook(author, title, read, score) {
+  if (score == "") {
+    score = 0;
+  }
+
+  try {
+    const option = {
+      method: "POST",
+      body: JSON.stringify({
+        author: author,
+        title: title,
+        isDone: read,
+        score: score,
+      }),
+
+      //! Content-type headern talar om vilken typ av data som bodyn innehåller.
+      headers: {
+        "Content-type": "application/json",
+      },
+    };
+
+    const response = await fetch(baseURL + ".json", option);
+
+    if (!response.ok) {
+      throw new Error("Posting new book failed");
+    }
+
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    throw error;
+  }
+}
+
+export async function getAllBooks() {
+  try {
+    const response = await fetch(baseURL + ".json");
+    if (!response.ok) {
+      throw new Error("Fetching books response failed");
+    }
+
+    const data = await response.json();
+    console.log("📚 BOOK DATA:", data);
+    return data;
+  } catch (error) {
+    throw error;
+  }
+}

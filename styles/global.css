@@ -1,0 +1,26 @@
+body {
+  background-color: antiquewhite;
+  color: black;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 50%;
+  border: 1px solid red;
+}
+
+.inputComponents {
+  min-width: fit-content;
+  border: 1px solid rgb(5, 226, 255);
+}
+
+.displayBooks {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 50%;
+  border: 1px solid red;
+  margin-top: 2rem;
+}

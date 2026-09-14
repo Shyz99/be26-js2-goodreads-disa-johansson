@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/global.css" />
+    <script src="./scripts/main.js" type="module"></script>
+
+    <title>Goodreads - Disa Johansson</title>
+  </head>
+  <body>
+    <h1>Goodreads</h1>
+    <form class="formContainer">
+        <input class="inputComponents" type="text" id="title" placeholder="Book Title"></input>
+        <input class="inputComponents" type="text" id="author" placeholder="Author"></input>
+        <input type="number" min="0" max="10" id="score" placeholder="Score [0 - 10]"></input>
+        <div class="inputComponents">
+            <input type="checkbox" id="read">Read</input>
+        </div>
+        <button class="inputComponents" id="submit">Submit</button>
+    </form>
+
+    <div class="displayBooks" id="displayBooks">
+        <h2>Books</h2>
+    </div>
+    
+  </body>
+</html>
