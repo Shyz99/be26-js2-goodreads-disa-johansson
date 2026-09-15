@@ -10,14 +10,16 @@
   </head>
   <body>
     <h1>Goodreads</h1>
-    <form class="formContainer">
-        <input class="inputComponents" type="text" id="title" placeholder="Book Title"></input>
-        <input class="inputComponents" type="text" id="author" placeholder="Author"></input>
-        <input type="number" min="0" max="10" id="score" placeholder="Score [0 - 10]"></input>
-        <div class="inputComponents">
-            <input type="checkbox" id="read">Read</input>
-        </div>
-        <button class="inputComponents" id="submit">Submit</button>
+    <form id="formInputNewBooks" class="formContainer">
+  <!-- ! Ge namnvärden för att kunna hämta form data -->
+        <input class="inputComponents" type="text" name="tilteInput" placeholder="Book Title"></input>
+        <input class="inputComponents" type="text" name="authorInput" placeholder="Author"></input>
+        <input type="number" min="0" max="10" name="scoreInput" placeholder="Score [0 - 10]"></input>
+        <!-- ! Kan sätta ett label element istället  -->
+        <label class="inputComponents">
+            <input type="checkbox" name="isReadInput">Read</input>
+        </label>
+        <button class="inputComponents" name="submit">Submit</button>
     </form>
 
     <div class="displayBooks" id="displayBooks">

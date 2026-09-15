@@ -1,22 +1,22 @@
 import { getAllBooks, addBook } from "./modules/firebaserequests.js";
 
-const isRead = document.getElementById("read");
-const title = document.getElementById("title");
-const author = document.getElementById("author");
-const score = document.getElementById("score");
-const form = document.querySelector("form");
+//! Kan döpa mer tydligt
+//! eller anv'nda form data
 
-getAllBooks();
+const formInputNewBooks = document.querySelector("#formInputNewBooks");
 
-form.addEventListener("submit", async (event) => {
+formInputNewBooks.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  addBook(author.value, title.value, isRead.checked, score.value);
+  const newBookFormData = new FormData(formInputNewBooks);
 
-  console.log("Is Read?", isRead.checked);
-  console.log("Title?", title.value);
-  console.log("Author?", author.value);
-  console.log("Score?", score.value);
+  const newBookObj = Object.fromEntries(newBookFormData.entries());
+  const json = JSON.stringify(newBookObj);
 
-  getAllBooks();
+  console.log("OBJ", newBookObj);
+  console.log("JSON", json);
+
+  addBook(newBookObj);
+
+  // getAllBooks();
 });

@@ -1,7 +1,18 @@
 export const baseURL =
   "https://be26-js2-goodreads-default-rtdb.europe-west1.firebasedatabase.app/books";
 
-export async function addBook(author, title, read, score) {
+export async function addBook(newBookObj) {
+  const author = newBookObj.authorInput;
+  const tilte = newBookObj.tilteInput;
+  let score = newBookObj.scoreInput;
+  let isRead = newBookObj.isReadInput;
+
+  if (isRead === "on") {
+    isRead = true;
+  } else {
+    isRead = false;
+  }
+
   if (score == "") {
     score = 0;
   }
@@ -11,8 +22,8 @@ export async function addBook(author, title, read, score) {
       method: "POST",
       body: JSON.stringify({
         author: author,
-        title: title,
-        isDone: read,
+        title: tilte,
+        isDone: isRead,
         score: score,
       }),
 
