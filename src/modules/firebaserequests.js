@@ -14,7 +14,7 @@ export async function addBook(newBookObj) {
   }
 
   if (score == "") {
-    score = 0;
+    score = "NONE";
   }
 
   try {
@@ -23,7 +23,7 @@ export async function addBook(newBookObj) {
       body: JSON.stringify({
         author: author,
         title: tilte,
-        isDone: isRead,
+        isRead: isRead,
         score: score,
       }),
 
@@ -46,7 +46,7 @@ export async function addBook(newBookObj) {
   }
 }
 
-export async function getAllBooks() {
+export async function getAllBooksData() {
   try {
     const response = await fetch(baseURL + ".json");
     if (!response.ok) {
