@@ -1,9 +1,14 @@
-import { getAllBooksData, addBook } from "./modules/firebaserequests.js";
+import {
+  getAllBooksData,
+  addBook,
+  deletABook,
+} from "./modules/firebaserequests.js";
 import { renderAllBooks } from "./modules/renderAllBooks.js";
 
 //! Kan döpa mer tydligt
 //! eller anv'nda form data
 const formInputNewBooks = document.querySelector("#formInputNewBooks");
+const delBtn = document.getElementById("delBtn");
 
 getAllBooksData()
   .then(renderAllBooks)
@@ -33,4 +38,16 @@ formInputNewBooks.addEventListener("submit", async (event) => {
     .catch((error) => console.log(error));
 
   // Kan annars i frmatrid3en skriva om och bara skapa enm instans av den nya boken istället för att skicka request till databasen igen
+});
+
+delBtn.addEventListener("click", async (event) => {
+  event.preventDefault();
+  try {
+    await deletABook("-P1oLCepuj2WFbAnbK1r");
+  } catch (error) {
+    console.log(error);
+  }
+  getAllBooksData()
+    .then(renderAllBooks)
+    .catch((error) => console.log(error));
 });

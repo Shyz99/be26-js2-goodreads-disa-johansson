@@ -1,0 +1,8 @@
+.bookContainer {
+  border: 2px solid green;
+  background-color: beige;
+}
+
+.bookReadIsTrue {
+  background-color: green;
+}
