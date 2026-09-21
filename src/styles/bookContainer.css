@@ -6,3 +6,7 @@
 .bookReadIsTrue {
   background-color: green;
 }
+
+.scoreDataOff {
+  display: none;
+}

@@ -1,14 +1,12 @@
-import {
-  getAllBooksData,
-  addBook,
-  deletABook,
-} from "./modules/firebaserequests.js";
-import { renderAllBooks } from "./modules/renderAllBooks.js";
+import { getAllBooksData } from "./modules/firebaseRequests/getAllBooksData.js";
+import { renderAllBooks } from "./modules/renderBooks/renderAllBooks.js";
+// import { deleteBook } from "./modules/firebaseRequests/deleteBook.js";
+import { patchBook } from "./modules/firebaseRequests/patchBook.js";
+import { postBook } from "./modules/firebaseRequests/postBook.js";
 
 //! Kan döpa mer tydligt
 //! eller anv'nda form data
 const formInputNewBooks = document.querySelector("#formInputNewBooks");
-const delBtn = document.getElementById("delBtn");
 
 getAllBooksData()
   .then(renderAllBooks)
@@ -26,7 +24,7 @@ formInputNewBooks.addEventListener("submit", async (event) => {
     console.log("OBJ", newBookObj);
     console.log("JSON", json);
 
-    await addBook(newBookObj);
+    await postBook(newBookObj);
   } catch (error) {
     throw error;
   }
@@ -38,16 +36,4 @@ formInputNewBooks.addEventListener("submit", async (event) => {
     .catch((error) => console.log(error));
 
   // Kan annars i frmatrid3en skriva om och bara skapa enm instans av den nya boken istället för att skicka request till databasen igen
-});
-
-delBtn.addEventListener("click", async (event) => {
-  event.preventDefault();
-  try {
-    await deletABook("-P1oLCepuj2WFbAnbK1r");
-  } catch (error) {
-    console.log(error);
-  }
-  getAllBooksData()
-    .then(renderAllBooks)
-    .catch((error) => console.log(error));
 });
