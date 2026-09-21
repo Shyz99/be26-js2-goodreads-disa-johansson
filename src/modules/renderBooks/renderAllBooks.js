@@ -1,46 +1,13 @@
-import { bookIsReadTrue } from "./bookIsReadTrue.js";
+import { BookCard } from "./BookCard.js";
 
 export function renderAllBooks(allBooksObj) {
-  const bookDisplayContainer = document.querySelector("#displayBooks");
-  bookDisplayContainer.innerHTML = "";
+  const newBookDisplayContainer = document.querySelector("#displayBooks");
+  newBookDisplayContainer.innerHTML = "";
 
   for (const id in allBooksObj) {
-    const bookContainer = document.createElement("section");
-    const bookDisplayDataContainer = document.createElement("section");
-    const editButtonsContainer = document.createElement("section");
-    const titleData = document.createElement("h3");
-    const authorData = document.createElement("p");
-    const scoreData = document.createElement("p");
-    const editScoreDataBtn = document.createElement("button");
-    const markBookAsReadBtn = document.createElement("button");
-    const removeBookBtn = document.createElement("button");
+    const bookCard = new BookCard(id, allBooksObj[id]);
+    const bookCardContainer = bookCard.render();
 
-    titleData.innerText = allBooksObj[id].title;
-    authorData.innerText = allBooksObj[id].author;
-    scoreData.innerText = "Score: " + allBooksObj[id].score;
-    editScoreDataBtn.innerText = "Edit Score";
-    removeBookBtn.innerText = "Remove book";
-
-    bookDisplayDataContainer.append(titleData, authorData, scoreData);
-
-    editButtonsContainer.append(
-      markBookAsReadBtn,
-      editScoreDataBtn,
-      removeBookBtn,
-    );
-
-    bookIsReadTrue(
-      allBooksObj,
-      id,
-      bookContainer,
-      markBookAsReadBtn,
-      scoreData,
-      editScoreDataBtn,
-    );
-
-    bookContainer.append(bookDisplayDataContainer, editButtonsContainer);
-    bookContainer.classList.add("bookContainer");
-
-    bookDisplayContainer.append(bookContainer);
+    newBookDisplayContainer.append(bookCardContainer);
   }
 }

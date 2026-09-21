@@ -1,12 +1,19 @@
 .bookContainer {
-  border: 2px solid green;
-  background-color: beige;
+  border: 0.3rem solid burlywood;
+  border-radius: 0.4rem;
+  background-color: rgb(228, 216, 181);
+  padding: 0.4rem;
 }
 
 .bookReadIsTrue {
-  background-color: green;
+  background-color: rgb(152, 189, 83);
 }
 
 .scoreDataOff {
   display: none;
+}
+
+.removeBtn {
+  color: rgb(212, 212, 178);
+  background-color: rgb(131, 48, 48);
 }

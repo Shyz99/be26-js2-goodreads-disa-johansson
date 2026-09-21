@@ -8,19 +8,31 @@ body {
   flex-direction: column;
   gap: 1rem;
   max-width: 50%;
-  border: 1px solid red;
+  border: 0.3rem solid darkgray;
+  border-radius: 0.4rem;
 }
 
 .inputComponents {
+  margin: 0.3rem;
+  padding: 0.2rem;
   min-width: fit-content;
-  border: 1px solid rgb(5, 226, 255);
+  border: 0.1rem solid darkgray;
+  border-radius: 0.4rem;
 }
 
 .displayBooks {
   display: flex;
   flex-direction: column;
+  padding: 0.4rem;
   gap: 1rem;
   max-width: 50%;
-  border: 1px solid red;
+  border: 0.3rem solid darkgray;
+  border-radius: 0.4rem;
   margin-top: 2rem;
+}
+
+button {
+  background-color: burlywood;
+  padding: 0.3rem;
+  border-radius: 0.4rem;
 }
