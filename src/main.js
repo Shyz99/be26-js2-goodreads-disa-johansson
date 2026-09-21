@@ -19,10 +19,10 @@ formInputNewBooks.addEventListener("submit", async (event) => {
     const newBookFormData = new FormData(formInputNewBooks);
 
     const newBookObj = Object.fromEntries(newBookFormData.entries());
-    const json = JSON.stringify(newBookObj);
 
-    console.log("OBJ", newBookObj);
-    console.log("JSON", json);
+    // const json = JSON.stringify(newBookObj);
+    // console.log("OBJ", newBookObj);
+    // console.log("JSON", json);
 
     await postBook(newBookObj);
   } catch (error) {
