@@ -1,7 +1,5 @@
 import { getAllBooksData } from "./modules/firebaseRequests/getAllBooksData.js";
 import { renderAllBooks } from "./modules/renderBooks/renderAllBooks.js";
-// import { deleteBook } from "./modules/firebaseRequests/deleteBook.js";
-import { patchBook } from "./modules/firebaseRequests/patchBook.js";
 import { postBook } from "./modules/firebaseRequests/postBook.js";
 
 //! Kan döpa mer tydligt

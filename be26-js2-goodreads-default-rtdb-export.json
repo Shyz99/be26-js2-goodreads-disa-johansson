@@ -1,18 +1,34 @@
 {
-"books": {
-  "LOTR": {
-    "title": "Lord Of the Rings",
-    "author": "Disa",
-    "isRead": true,
-    "score": 8
-  },
-
-  "Vampires": {
-    "title": "Vamps",
-    "author": "Rey",
-    "isRead": false,
-    "score": 4
+  "books": {
+    "-P24DdWsGbwIP28G90wW": {
+      "author": "V.E. Schwab",
+      "isRead": false,
+      "score": 0,
+      "title": "Bury Our Bones in the Midnight Soil"
+    },
+    "-P24E0H3lxBeHspux7Zf": {
+      "author": "Martha Wells",
+      "isRead": true,
+      "score": "10",
+      "title": "The Murderbot Diaries - All Systems Red"
+    },
+    "-P24E9zQkZ6CSTG6f7kH": {
+      "author": "Matt Dinniman",
+      "isRead": false,
+      "score": 0,
+      "title": "Dungeon Crawler Carl"
+    },
+    "-P24G9ogjPiqZ0OpLWnP": {
+      "author": "Leonard Cohen",
+      "isRead": true,
+      "score": "10",
+      "title": "The Book of Longing"
+    },
+    "-P24HRgarDC5WDhswcJg": {
+      "author": "william gibson",
+      "isRead": false,
+      "score": 0,
+      "title": "Pattern recognition "
+    }
   }
 }
-
-  }

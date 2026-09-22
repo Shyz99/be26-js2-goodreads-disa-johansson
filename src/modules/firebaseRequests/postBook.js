@@ -22,7 +22,6 @@ export async function postBook(newBookObj) {
         score: score,
       }),
 
-      //! Content-type headern talar om vilken typ av data som bodyn innehåller.
       headers: {
         "Content-type": "application/json",
       },

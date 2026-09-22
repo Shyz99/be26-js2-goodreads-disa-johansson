@@ -14,15 +14,12 @@ export function renderAllBooks(allBooksObj) {
     const editButtonsContainer = document.createElement("section");
     const removeBookBtn = document.createElement("button");
     const editScoreDataBtn = document.createElement("button");
-    // const editScoreDataForm = document.createElement("form");
     const editScoreDataInput = document.createElement("input");
     const markBookAsReadBtn = document.createElement("button");
 
-    // editScoreDataForm.append(editScoreDataInput);
-
     editScoreDataInput.name = "scoreInput";
+    editScoreDataInput.type = "number";
     editScoreDataInput.placeholder = "Add new Score";
-    console.log(editScoreDataInput.value);
 
     removeBookBtn.innerText = "Remove book";
     removeBookBtn.classList.add("removeBtn");

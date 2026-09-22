@@ -15,5 +15,3 @@ export async function getAllBooksData() {
     throw error;
   }
 }
-
-//! samala alla i en fil eller dela upp dem, med en mapp Firebase requests

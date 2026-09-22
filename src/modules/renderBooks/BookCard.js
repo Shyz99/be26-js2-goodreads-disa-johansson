@@ -1,9 +1,7 @@
 // import { bookIsReadTrue } from "./bookIsReadTrue.js";
-import { getAllBooksData } from "../firebaseRequests/getAllBooksData.js";
-import { deleteBook } from "../firebaseRequests/deleteBook.js";
-import { renderAllBooks } from "./renderAllBooks.js";
-
 export class BookCard {
+  //? Lägg till # sen
+
   constructor(id, bookData) {
     this.id = id;
     this.title = bookData.title;
@@ -31,11 +29,6 @@ export class BookCard {
       bookContainer.classList.remove("bookReadIsTrue");
       scoreData.classList.add("scoreDataOff");
     }
-
-    // bookContainer.append(
-    //   bookDisplayDataContainer,
-    //   editButtonsContainer
-    // );
 
     bookContainer.append(titleData, authorData, scoreData);
     return bookContainer;
