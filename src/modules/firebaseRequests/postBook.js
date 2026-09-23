@@ -33,7 +33,6 @@ export async function postBook(newBookObj) {
       throw new Error("Posting new book failed");
     }
 
-    //! Maybe a bug when not having any books and trying to add one it adds two
     const data = await response.json();
     return data;
   } catch (error) {

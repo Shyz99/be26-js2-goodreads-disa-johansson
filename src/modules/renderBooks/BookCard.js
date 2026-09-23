@@ -1,7 +1,5 @@
 // import { bookIsReadTrue } from "./bookIsReadTrue.js";
 export class BookCard {
-  //? Lägg till # sen
-
   constructor(id, bookData) {
     this.id = id;
     this.title = bookData.title;

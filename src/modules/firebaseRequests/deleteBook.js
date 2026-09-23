@@ -7,10 +7,9 @@ export async function deleteBook(id) {
   try {
     const deleteURL = `${baseURL}/${id}.json`;
     const response = await fetch(deleteURL, options);
-    console.log("ID:", id);
 
     if (!response.ok) {
-      throw new Error("Delete book failed");
+      throw new Error("Deleting book failed");
     }
     const data = await response.json();
     return data;

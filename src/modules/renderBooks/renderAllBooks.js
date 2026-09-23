@@ -41,7 +41,7 @@ export function renderAllBooks(allBooksObj) {
       markBookAsReadBtn,
       removeBookBtn,
     );
-    newBookDisplayContainer.append(bookCardContainer, editButtonsContainer);
+    newBookDisplayContainer.append(editButtonsContainer, bookCardContainer);
 
     markBookAsReadBtn.addEventListener("click", () => {
       patchBook(id, "isRead", !allBooksObj[id].isRead)

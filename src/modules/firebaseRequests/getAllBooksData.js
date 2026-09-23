@@ -5,11 +5,10 @@ export async function getAllBooksData() {
   try {
     const response = await fetch(baseURL + ".json");
     if (!response.ok) {
-      throw new Error("Fetching books response failed");
+      throw new Error("Fetching all books data response failed");
     }
 
     const data = await response.json();
-    console.log("📚 BOOK DATA:", data);
     return data;
   } catch (error) {
     throw error;

@@ -17,3 +17,14 @@
   color: rgb(212, 212, 178);
   background-color: rgb(131, 48, 48);
 }
+
+.displayBooks {
+  display: flex;
+  flex-direction: column-reverse;
+  padding: 0.4rem;
+  gap: 1rem;
+  max-width: 50%;
+  border: 0.3rem solid darkgray;
+  border-radius: 0.4rem;
+  margin-top: 2rem;
+}

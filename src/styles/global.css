@@ -20,17 +20,6 @@ body {
   border-radius: 0.4rem;
 }
 
-.displayBooks {
-  display: flex;
-  flex-direction: column;
-  padding: 0.4rem;
-  gap: 1rem;
-  max-width: 50%;
-  border: 0.3rem solid darkgray;
-  border-radius: 0.4rem;
-  margin-top: 2rem;
-}
-
 button {
   background-color: burlywood;
   padding: 0.3rem;

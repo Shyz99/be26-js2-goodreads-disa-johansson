@@ -11,7 +11,9 @@ export async function patchBook(ID, key, newValue) {
 
   try {
     const response = await fetch(`${baseURL}/${ID}.json`, options);
-    if (!response.ok) throw new Error("Something when PATCHING went wrong");
+    if (!response.ok) {
+      throw new Error("Patching book failed");
+    }
 
     const data = await response.json();
     return data;
