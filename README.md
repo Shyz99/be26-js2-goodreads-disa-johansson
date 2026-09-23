@@ -1,9 +1,13 @@
 # be26-js2-goodreads-disa-johansson
 
-Inlämning 1 - Goodreads
-hej
+## Inlämning 1 - Goodreads
 
-Lets see if this push works
+BE26 | JavaScript 2
 
-TEST
-Test 2
+### Disa Johansson
+
+**Link to Github:**
+https://github.com/Shyz99/be26-js2-goodreads-disa-johansson
+
+**Link to Netlify:**
+https://be26-js2-goodreads-disa-johansson.netlify.app/
